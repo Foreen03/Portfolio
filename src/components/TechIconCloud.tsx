@@ -10,7 +10,7 @@ const ICONS = [
   { name: "Python", src: "/assets/python.png", position: [-5, -1, 0] },
   { name: "Node.js", src: "/assets/node.png", position: [2, 4, -2] },
   { name: "C#", src: "/assets/csharp.png", position: [-3, -4, 1] },
-  { name: "Azure", src: "/assets/azure.png", position: [0, -3, 3] },
+  { name: "Kotlin", src: "/assets/kotlin.svg", position: [0, -3, 3] },
   { name: "Docker", src: "/assets/docker.png", position: [3, 0, 3] },
   { name: "Git", src: "/assets/git.png", position: [-2, 2, 2] },
   { name: "TailwindCSS", src: "/assets/tailwind.png", position: [1, -4, -2] },

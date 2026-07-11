@@ -55,8 +55,10 @@ function Particles({ isDark }: { isDark: boolean }) {
 
 // Subtle camera movement responsive to mouse
 function CameraRig() {
-  useFrame((state) => {
-    const t = state.clock.elapsedTime;
+  const tRef = useRef(0);
+  useFrame((state, delta) => {
+    tRef.current += delta;
+    const t = tRef.current;
     // Base slight movement
     state.camera.position.x = THREE.MathUtils.lerp(state.camera.position.x, (state.mouse.x * 2) + Math.sin(t / 4), 0.05);
     state.camera.position.y = THREE.MathUtils.lerp(state.camera.position.y, (state.mouse.y * 2) + Math.sin(t / 4), 0.05);
