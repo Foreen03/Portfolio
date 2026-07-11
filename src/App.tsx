@@ -1,21 +1,36 @@
-import { Button } from "@/components/ui/button"
+import { ThemeProvider } from "./components/ThemeProvider";
+import { Navbar } from "./components/Navbar";
+import { Footer } from "./components/Footer";
+import { ThreeScene } from "./components/ThreeScene";
+import { Hero } from "./sections/Hero";
+import { About } from "./sections/About";
+import { Education } from "./sections/Education";
+import { Experience } from "./sections/Experience";
+import { Projects } from "./sections/Projects";
+import { Achievements } from "./sections/Achievements";
+import { Contact } from "./sections/Contact";
 
 export function App() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
+    <ThemeProvider defaultTheme="system" storageKey="portfolio-theme">
+      <div className="relative min-h-screen text-foreground antialiased selection:bg-primary/30">
+        <ThreeScene />
+        <Navbar />
+        
+        <main>
+          <Hero />
+          <About />
+          <Experience />
+          <Education />
+          <Projects />
+          <Achievements />
+          <Contact />
+        </main>
+        
+        <Footer />
       </div>
-    </div>
-  )
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
