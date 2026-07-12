@@ -78,11 +78,11 @@ export function Contact() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="group flex flex-col items-center gap-3 p-6 rounded-2xl bg-card/40 backdrop-blur-sm border border-border/50 hover:bg-card/80 transition-all hover:-translate-y-1">
+            <a href="https://github.com/Foreen03" target="_blank" rel="noreferrer" className="group flex flex-col items-center gap-3 p-6 rounded-2xl bg-card/40 backdrop-blur-sm border border-border/50 hover:bg-card/80 transition-all hover:-translate-y-1">
               <FaGithub className="w-8 h-8 text-muted-foreground group-hover:text-foreground transition-colors" />
               <span className="text-sm font-medium">GitHub</span>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="group flex flex-col items-center gap-3 p-6 rounded-2xl bg-card/40 backdrop-blur-sm border border-border/50 hover:bg-card/80 transition-all hover:-translate-y-1">
+            <a href="https://www.linkedin.com/in/yeoh-han-yi-6a4765160" target="_blank" rel="noreferrer" className="group flex flex-col items-center gap-3 p-6 rounded-2xl bg-card/40 backdrop-blur-sm border border-border/50 hover:bg-card/80 transition-all hover:-translate-y-1">
               <FaLinkedin className="w-8 h-8 text-muted-foreground group-hover:text-[#0077b5] transition-colors" />
               <span className="text-sm font-medium">LinkedIn</span>
             </a>

@@ -44,6 +44,7 @@ export const projects: Project[] = [
     ],
     features: [
       "Real-time BLE motion data streaming at 60 Hz with sub-10ms latency",
+      "Step detection and convert into character movement",
       "Cross-engine SDK supporting Unity, Godot 4, and Cocos Creator",
       "Xbox 360 controller emulation via ViGEm for existing PC games",
       "Dynamic gamepad layout editor with phone-to-PC transfer",

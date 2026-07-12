@@ -8,21 +8,18 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Yeoh Han Yi. All rights reserved.
           </p>
-          <p className="text-xs text-muted-foreground mt-1">
-            Built with React, Vite, Three.js & TailwindCSS
-          </p>
         </div>
-        
+
         <div className="flex items-center gap-4">
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+          <a href="https://github.com/Foreen03" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
             <FaGithub className="w-5 h-5" />
             <span className="sr-only">GitHub</span>
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+          <a href="https://www.linkedin.com/in/yeoh-han-yi-6a4765160" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
             <FaLinkedin className="w-5 h-5" />
             <span className="sr-only">LinkedIn</span>
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+          <a href="https://twitter.com/Hanyi_Yeoh" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
             <FaTwitter className="w-5 h-5" />
             <span className="sr-only">Twitter</span>
           </a>
