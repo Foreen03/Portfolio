@@ -36,7 +36,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex-1">
           <a href="#hero" className="text-xl font-bold tracking-tight">
-            Portfolio<span className="text-primary">.</span>
+            Yeoh Han Yi<span className="text-primary">.</span>
           </a>
         </div>
 

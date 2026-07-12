@@ -46,7 +46,7 @@ export function Contact() {
               <FaTwitter className="w-8 h-8 text-muted-foreground group-hover:text-[#1DA1F2] transition-colors" />
               <span className="text-sm font-medium">Twitter</span>
             </a>
-            <div className="group flex flex-col items-center gap-3 p-6 rounded-2xl bg-card/40 backdrop-blur-sm border border-border/50">
+            <div className="group flex flex-col items-center gap-3 p-6 rounded-2xl bg-card/40 backdrop-blur-sm border border-border/50 hover:bg-card/80 transition-all hover:-translate-y-1">
               <MapPin className="w-8 h-8 text-muted-foreground" />
               <span className="text-sm font-medium">Penang</span>
             </div>

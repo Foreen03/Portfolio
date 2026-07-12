@@ -34,7 +34,10 @@ export const projects: Project[] = [
       "Vite",
       "BLE",
       "WebSocket",
-      "GDScript"
+      "ShadcnUI",
+      "Unity",
+      "Godot",
+      "Cocos Creator"
     ],
     features: [
       "Real-time BLE motion data streaming at 60 Hz with sub-10ms latency",

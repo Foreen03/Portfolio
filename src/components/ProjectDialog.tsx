@@ -99,9 +99,9 @@ export function ProjectDialog({ project, isOpen, onClose }: ProjectDialogProps) 
                 <h3 className="text-xl font-bold mb-3 text-foreground">Key Features</h3>
                 <ul className="space-y-2">
                   {project.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-muted-foreground">
-                      <span className="text-primary mt-1.5 text-xs">◆</span>
-                      {feature}
+                    <li key={idx} className="flex items-center gap-2 text-muted-foreground">
+                      <span className="text-primary text-xs shrink-0">◆</span>
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
