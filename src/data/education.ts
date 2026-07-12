@@ -9,16 +9,18 @@ export interface Education {
 export const educationList: Education[] = [
   {
     id: "1",
-    school: "University of Technology",
-    degree: "Master of Science in Computer Science",
-    duration: "2021 - 2023",
-    description: "Specialized in Artificial Intelligence and Distributed Systems. Graduated with Honors. Thesis on optimizing neural network architectures for edge devices.",
+    school: "Multimedia University (MMU)",
+    degree: "Foundation in Information Technology",
+    duration: "May 2022 - May 2023",
+    description:
+      "Built a strong foundation in programming, mathematics, computer systems, and information technology, preparing for further studies in software engineering.",
   },
   {
     id: "2",
-    school: "State University",
-    degree: "Bachelor of Science in Software Engineering",
-    duration: "2017 - 2021",
-    description: "Core coursework included Data Structures, Algorithms, Operating Systems, and Web Development. President of the Computer Science Club.",
-  },
-];
+    school: "Multimedia University (MMU)",
+    degree: "Bachelor of Computer Science (Hons.) (Software Engineering)",
+    duration: "Aug 2023 - Aug 2026",
+    description:
+      "Focused on software engineering principles, full-stack application development, software architecture, database systems, and software testing. Completed various academic and team-based projects while strengthening problem-solving and collaborative development skills.",
+  }
+]

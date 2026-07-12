@@ -25,14 +25,16 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Hello! My name is Yeoh Han Yi and I enjoy creating things that live on the internet. 
-                My interest in web development started back in 2017 when I decided to try editing custom Tumblr themes — 
-                turns out hacking together HTML & CSS taught me a lot about HTML & CSS!
+                Hello! My name is Yeoh Han Yi. I'm a Software Engineering graduate from Multimedia University (MMU) 
+                with a passion for designing and developing software that is both functional and user-centered. 
+                I enjoy turning ideas into reliable applications through clean code, thoughtful design, and modern technologies. 
+                My experience includes web, mobile, and desktop development, where I focus on building solutions that deliver a 
+                seamless user experience.
               </p>
               <p>
-                Fast-forward to today, and I've had the privilege of working at a start-up, a huge corporation, 
-                and a student-led design studio. My main focus these days is building accessible, inclusive products 
-                and digital experiences at TechNova Solutions for a variety of clients.
+                I enjoy exploring new technologies and continuously expanding my skill set to stay current with the 
+                ever-evolving software industry. Whether working independently or collaborating with a team, I value writing 
+                maintainable code, solving challenging problems, and creating software that delivers real value to its users.
               </p>
             </div>
 

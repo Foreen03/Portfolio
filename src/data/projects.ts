@@ -72,7 +72,7 @@ export const projects: Project[] = [
     description: "A premium, interactive developer portfolio website.",
     longDescription:
       "A modern developer portfolio built to showcase projects and experience. It features a custom Three.js animated background, Framer Motion transitions, and a fully responsive layout with dark mode support.",
-    image: "https://images.unsplash.com/photo-1547658719-da2b51159128?q=80&w=2000&auto=format&fit=crop",
+    image: "src/assets/images/portfolio.png",
     githubUrl: "https://github.com",
     technologies: ["React", "TypeScript", "Three.js", "TailwindCSS", "Framer Motion"],
     features: [

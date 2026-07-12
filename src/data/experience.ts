@@ -10,37 +10,37 @@ export interface Experience {
 export const experienceList: Experience[] = [
   {
     id: "1",
-    company: "TechNova Solutions",
-    position: "Senior Frontend Engineer",
-    duration: "Jan 2023 - Present",
+    company: "GlobeOSS",
+    position: "Software Engineering Intern",
+    duration: "Jul 2025 - Oct 2025",
     responsibilities: [
-      "Architected and developed the core user interface for the company's flagship SaaS product.",
-      "Mentored junior developers and established frontend coding standards and best practices.",
-      "Reduced application bundle size by 40% through code splitting and lazy loading.",
+      "Developed and maintained full-stack features for enterprise web applications using React, Next.js, Express.js, and T-SQL.",
+      "Implemented reusable frontend components and custom API hooks to improve code maintainability and development efficiency.",
+      "Integrated Azure Maps for geospatial visualization and developed interactive dashboards with dynamic charts and data visualization.",
+      "Collaborated with senior developers to enhance system performance, fix bugs, and deliver new features in an Agile development environment."
     ],
-    technologies: ["React", "TypeScript", "Next.js", "TailwindCSS", "Zustand"],
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Express.js",
+      "T-SQL",
+      "Azure Maps",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Git"
+    ]
   },
   {
     id: "2",
-    company: "Creative Digital Studio",
-    position: "Full Stack Developer",
-    duration: "Jun 2021 - Dec 2022",
+    company: "QDOS Flexcircuits Sdn Bhd",
+    position: "QA Technician",
+    duration: "Jul 2021 - Apr 2022",
     responsibilities: [
-      "Built responsive, interactive web applications for diverse clients in the e-commerce and media sectors.",
-      "Integrated third-party APIs and payment gateways (Stripe, PayPal).",
-      "Designed and implemented RESTful APIs using Node.js and Express.",
+      "Perform daily inspection activities.",
+      "Data collection and complete IQA Inspection Report.",
+      "To undertake any additional job and responsibilities from supervisor from time to time.",
     ],
-    technologies: ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
-  },
-  {
-    id: "3",
-    company: "WebSphere Inc.",
-    position: "Frontend Developer Intern",
-    duration: "May 2020 - Aug 2020",
-    responsibilities: [
-      "Assisted in migrating legacy jQuery code to modern React components.",
-      "Wrote unit and integration tests using Jest and React Testing Library, increasing test coverage by 20%.",
-    ],
-    technologies: ["HTML/CSS", "JavaScript", "React", "Jest"],
+    technologies: ["Quality Assurance", "Quality Control", "Microsoft Excel"],
   }
 ];

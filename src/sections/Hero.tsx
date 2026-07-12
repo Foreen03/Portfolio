@@ -24,7 +24,7 @@ export function Hero() {
           >
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6">
               Yeoh Han Yi. <br className="hidden md:block" />
-              <span className="text-muted-foreground">I build digital experiences.</span>
+              <span className="text-muted-foreground">I build impactful software.</span>
             </h1>
           </motion.div>
 
@@ -34,9 +34,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-              I'm a software engineer specializing in building exceptional digital
-              experiences. Currently, I'm focused on building accessible,
-              human-centered products and exploring the intersection of design and engineering.
+              I'm a Software Engineering graduate passionate about creating intuitive, scalable 
+              applications across web, mobile and desktop platforms. 
             </p>
           </motion.div>
 
