@@ -4,6 +4,7 @@ import { Footer } from "./components/Footer";
 import { ThreeScene } from "./components/ThreeScene";
 import { Hero } from "./sections/Hero";
 import { About } from "./sections/About";
+import { Skills } from "./sections/Skills";
 import { Education } from "./sections/Education";
 import { Experience } from "./sections/Experience";
 import { Projects } from "./sections/Projects";
@@ -20,6 +21,7 @@ export function App() {
         <main>
           <Hero />
           <About />
+          <Skills />
           <Experience />
           <Education />
           <Projects />

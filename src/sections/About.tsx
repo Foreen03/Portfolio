@@ -1,10 +1,27 @@
 import { motion } from "framer-motion";
+import { Code2, MonitorSmartphone, Server, Lightbulb } from "lucide-react";
 
-const STATS = [
-  { label: "Years of Experience", value: "3+" },
-  { label: "Projects Completed", value: "20+" },
-  { label: "Awards Won", value: "5" },
-  { label: "Technologies Mastered", value: "15+" },
+const CORE_STRENGTHS = [
+  {
+    title: "Frontend Development",
+    description: "Building responsive, fast, and beautiful web interfaces.",
+    icon: <Code2 className="w-6 h-6 text-primary" />,
+  },
+  {
+    title: "UI/UX Design",
+    description: "Creating intuitive and user-centered digital experiences.",
+    icon: <MonitorSmartphone className="w-6 h-6 text-primary" />,
+  },
+  {
+    title: "Backend Development",
+    description: "Designing robust APIs, managing databases, and building scalable server architectures.",
+    icon: <Server className="w-6 h-6 text-primary" />,
+  },
+  {
+    title: "Problem Solving",
+    description: "Breaking down complex problems into elegant, maintainable code.",
+    icon: <Lightbulb className="w-6 h-6 text-primary" />,
+  },
 ];
 
 export function About() {
@@ -38,21 +55,24 @@ export function About() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
-              {STATS.map((stat, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {CORE_STRENGTHS.map((strength, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:border-primary/50 transition-all"
+                  className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-primary/50 transition-all flex flex-col gap-4 group"
                 >
-                  <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-                    {stat.value}
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/20 transition-all">
+                    {strength.icon}
                   </div>
-                  <div className="text-sm font-medium text-muted-foreground">
-                    {stat.label}
+                  <div>
+                    <h3 className="font-bold text-foreground mb-1">{strength.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {strength.description}
+                    </p>
                   </div>
                 </motion.div>
               ))}
