@@ -13,23 +13,38 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "1",
-    title: "E-Commerce Dashboard",
-    description: "A comprehensive admin dashboard for e-commerce platforms.",
+    title: "BlueStep Connect",
+    description: "A cross-platform Bluetooth framework turning Android phones into motion game controllers for PC.",
     longDescription:
-      "This modern e-commerce dashboard provides detailed analytics, order management, and user tracking. Built with React and Recharts, it handles large datasets efficiently and features a beautiful dark mode UI.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+      "BlueStep Connect is a cross-platform framework that converts standard Android smartphones into low-power motion controllers for PC games via BLE. It features a three-tier client-server architecture — an Android controller app (Jetpack Compose + MVVM), a PC bridge server (Photino.NET + React/Vite), and a cross-engine Game SDK (.NET Standard 2.1). The system achieves sub-10ms end-to-end latency at 60 Hz sensor streaming, supports Xbox 360 controller emulation via ViGEm, and includes a dynamic gamepad layout editor with device transfer. The SDK integrates with Unity, Godot 4, and Cocos Creator, making motion-based fitness game development accessible without specialized hardware.",
+    image: "src/assets/images/bluestep.png",
     images: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1500&auto=format&fit=crop"
+      "/src/assets/images/bluestep.png",
+      "/src/assets/images/bluestep-2.png",
+      "/src/assets/images/bluestep-3.png"
     ],
     githubUrl: "https://github.com",
-    technologies: ["React", "TypeScript", "TailwindCSS", "Recharts"],
+    technologies: [
+      "Kotlin",
+      "Jetpack Compose",
+      "C#",
+      ".NET",
+      "TypeScript",
+      "React",
+      "Vite",
+      "BLE",
+      "WebSocket",
+      "GDScript"
+    ],
     features: [
-      "Real-time analytics and data visualization",
-      "Order processing and inventory management",
-      "Role-based access control (RBAC)",
-      "Dark and light mode support",
+      "Real-time BLE motion data streaming at 60 Hz with sub-10ms latency",
+      "Cross-engine SDK supporting Unity, Godot 4, and Cocos Creator",
+      "Xbox 360 controller emulation via ViGEm for existing PC games",
+      "Dynamic gamepad layout editor with phone-to-PC transfer",
+      "Frame-rate independent exponential damping for sensor noise reduction",
+      "Auto-pause handling on device interruptions (calls, alarms)",
+      "GPX trail simulation and EXIF-tagged screenshot capture",
+      "Heartbeat-based connection failure detection with auto-reconnect"
     ],
   },
   {
@@ -50,22 +65,6 @@ export const projects: Project[] = [
   },
   {
     id: "3",
-    title: "Task Management App",
-    description: "A collaborative tool for managing team tasks and projects.",
-    longDescription:
-      "A Kanban-style task management board inspired by Linear and Trello. It supports drag-and-drop, real-time updates via WebSockets, and complex filtering capabilities to help teams stay organized and productive.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=2069&auto=format&fit=crop",
-    githubUrl: "https://github.com",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-    features: [
-      "Drag-and-drop Kanban boards",
-      "Real-time collaboration and updates",
-      "Customizable labels and priorities",
-      "Advanced task filtering and search",
-    ],
-  },
-  {
-    id: "4",
     title: "Portfolio",
     description: "A premium, interactive developer portfolio website.",
     longDescription:

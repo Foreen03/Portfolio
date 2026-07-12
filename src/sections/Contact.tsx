@@ -48,7 +48,7 @@ export function Contact() {
             </a>
             <div className="group flex flex-col items-center gap-3 p-6 rounded-2xl bg-card/40 backdrop-blur-sm border border-border/50">
               <MapPin className="w-8 h-8 text-muted-foreground" />
-              <span className="text-sm font-medium">San Francisco</span>
+              <span className="text-sm font-medium">Penang</span>
             </div>
           </div>
         </motion.div>

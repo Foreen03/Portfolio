@@ -4,6 +4,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "./ui/dialog";
+import { ScrollArea } from "./ui/scroll-area";
 import type { Project } from "../data/projects";
 import { FaGithub } from "react-icons/fa6";
 import { Button } from "./ui/button";
@@ -35,7 +36,8 @@ export function ProjectDialog({ project, isOpen, onClose }: ProjectDialogProps) 
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-4xl max-h-[90vh] overflow-y-auto overflow-x-hidden p-0 bg-card border-border/50 gap-0">
+      <DialogContent className="sm:max-w-4xl max-h-[90vh] overflow-hidden p-0 bg-card border-border/50 gap-0">
+        <ScrollArea className="max-h-[90vh]">
 
         <div className="relative h-64 md:h-80 w-full overflow-hidden group/carousel">
           {hasMultipleImages ? (
@@ -123,6 +125,7 @@ export function ProjectDialog({ project, isOpen, onClose }: ProjectDialogProps) 
             </div>
           </div>
         </div>
+        </ScrollArea>
       </DialogContent>
     </Dialog>
   );
