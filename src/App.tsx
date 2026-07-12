@@ -10,6 +10,7 @@ import { Experience } from "./sections/Experience";
 import { Projects } from "./sections/Projects";
 import { Achievements } from "./sections/Achievements";
 import { Contact } from "./sections/Contact";
+import { ScrollArea } from "./components/ui/scroll-area";
 
 export function App() {
   return (
@@ -18,18 +19,19 @@ export function App() {
         <ThreeScene />
         <Navbar />
         
-        <main>
-          <Hero />
-          <About />
-          <Skills />
-          <Experience />
-          <Education />
-          <Projects />
-          <Achievements />
-          <Contact />
-        </main>
-        
-        <Footer />
+        <ScrollArea className="h-screen w-full">
+          <main>
+            <Hero />
+            <About />
+            <Skills />
+            <Experience />
+            <Education />
+            <Projects />
+            <Achievements />
+            <Contact />
+          </main>
+          <Footer />
+        </ScrollArea>
       </div>
     </ThemeProvider>
   );

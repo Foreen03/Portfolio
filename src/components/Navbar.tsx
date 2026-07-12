@@ -19,11 +19,17 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+    const handleScroll = (e: Event) => {
+      const target = e.target as HTMLElement;
+      console.log("scroll event target:", target, "scrollTop:", target?.scrollTop);
+      if (target && target.scrollTop !== undefined) {
+        setIsScrolled(target.scrollTop > 20);
+      } else {
+        setIsScrolled(window.scrollY > 20);
+      }
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, true);
+    return () => window.removeEventListener("scroll", handleScroll, true);
   }, []);
 
   return (
