@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   longDescription: string;
   image: string;
+  images?: string[];
   githubUrl: string;
   technologies: string[];
   features: string[];
@@ -17,6 +18,11 @@ export const projects: Project[] = [
     longDescription:
       "This modern e-commerce dashboard provides detailed analytics, order management, and user tracking. Built with React and Recharts, it handles large datasets efficiently and features a beautiful dark mode UI.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1500&auto=format&fit=crop"
+    ],
     githubUrl: "https://github.com",
     technologies: ["React", "TypeScript", "TailwindCSS", "Recharts"],
     features: [
@@ -56,6 +62,22 @@ export const projects: Project[] = [
       "Real-time collaboration and updates",
       "Customizable labels and priorities",
       "Advanced task filtering and search",
+    ],
+  },
+  {
+    id: "4",
+    title: "Portfolio",
+    description: "A premium, interactive developer portfolio website.",
+    longDescription:
+      "A modern developer portfolio built to showcase projects and experience. It features a custom Three.js animated background, Framer Motion transitions, and a fully responsive layout with dark mode support.",
+    image: "https://images.unsplash.com/photo-1547658719-da2b51159128?q=80&w=2000&auto=format&fit=crop",
+    githubUrl: "https://github.com",
+    technologies: ["React", "TypeScript", "Three.js", "TailwindCSS", "Framer Motion"],
+    features: [
+      "Animated Three.js particle background and floating 3D icons",
+      "Custom dark and light mode integration",
+      "Smooth Framer Motion scroll reveals and page transitions",
+      "Accessible components using shadcn/ui",
     ],
   }
 ];

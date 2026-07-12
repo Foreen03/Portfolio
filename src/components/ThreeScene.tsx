@@ -53,12 +53,13 @@ function Particles({ isDark }: { isDark: boolean }) {
   );
 }
 
+let globalCameraTime = 0;
+
 // Subtle camera movement responsive to mouse
 function CameraRig() {
-  const tRef = useRef(0);
   useFrame((state, delta) => {
-    tRef.current += delta;
-    const t = tRef.current;
+    globalCameraTime += delta;
+    const t = globalCameraTime;
     // Base slight movement
     state.camera.position.x = THREE.MathUtils.lerp(state.camera.position.x, (state.mouse.x * 2) + Math.sin(t / 4), 0.05);
     state.camera.position.y = THREE.MathUtils.lerp(state.camera.position.y, (state.mouse.y * 2) + Math.sin(t / 4), 0.05);
@@ -76,7 +77,7 @@ export function ThreeScene() {
     : true;
 
   return (
-    <div className="fixed inset-0 -z-10 bg-background transition-colors duration-500">
+    <div className="fixed top-0 left-0 -z-10 bg-background transition-colors duration-500 w-screen h-screen overflow-hidden">
       <Canvas camera={{ position: [0, 0, 15], fov: 50 }} dpr={[1, 2]}>
         <ambientLight intensity={isDark ? 0.3 : 0.8} />
         <directionalLight position={[10, 10, 10]} intensity={isDark ? 1 : 2} />

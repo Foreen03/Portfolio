@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Float, Html } from "@react-three/drei";
 import * as THREE from "three";
@@ -14,7 +14,10 @@ const ICONS = [
   { name: "Docker", src: "/assets/docker.png", position: [3, 0, 3] },
   { name: "Git", src: "/assets/git.png", position: [-2, 2, 2] },
   { name: "TailwindCSS", src: "/assets/tailwind.png", position: [1, -4, -2] },
-];
+].map(icon => ({
+  ...icon,
+  randoms: getRandomValues()
+}));
 
 function getRandomValues() {
   return {
@@ -24,9 +27,10 @@ function getRandomValues() {
   };
 }
 
-function FloatingIcon({ src, name, position }: { src: string; name: string; position: [number, number, number] }) {
-  // Use random float speeds for variation
-  const [{ speed, rotationIntensity, floatIntensity }] = useState(() => getRandomValues());
+let globalRotationY = 0;
+
+function FloatingIcon({ src, name, position, randoms }: { src: string; name: string; position: [number, number, number], randoms: ReturnType<typeof getRandomValues> }) {
+  const { speed, rotationIntensity, floatIntensity } = randoms;
 
   return (
     <Float speed={speed} rotationIntensity={rotationIntensity} floatIntensity={floatIntensity} position={new THREE.Vector3(...position)}>
@@ -57,14 +61,15 @@ export function TechIconCloud() {
   useFrame((_, delta) => {
     if (groupRef.current) {
       // Extremely slow rotation of the entire cloud
-      groupRef.current.rotation.y += delta * 0.05;
+      globalRotationY += delta * 0.05;
+      groupRef.current.rotation.y = globalRotationY;
     }
   });
 
   return (
     <group ref={groupRef}>
       {ICONS.map((icon, i) => (
-        <FloatingIcon key={i} src={icon.src} name={icon.name} position={icon.position as [number, number, number]} />
+        <FloatingIcon key={i} src={icon.src} name={icon.name} position={icon.position as [number, number, number]} randoms={icon.randoms} />
       ))}
     </group>
   );

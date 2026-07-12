@@ -7,6 +7,16 @@ import {
 import type { Project } from "../data/projects";
 import { FaGithub } from "react-icons/fa6";
 import { Button } from "./ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { useState } from "react";
+
 interface ProjectDialogProps {
   project: Project | null;
   isOpen: boolean;
@@ -14,19 +24,47 @@ interface ProjectDialogProps {
 }
 
 export function ProjectDialog({ project, isOpen, onClose }: ProjectDialogProps) {
+  const [autoplayPlugin] = useState(() =>
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  );
+
   if (!project) return null;
+
+  const hasMultipleImages = project.images && project.images.length > 1;
+  const displayImages = hasMultipleImages ? project.images! : [project.image];
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-4xl max-h-[90vh] overflow-y-auto overflow-x-hidden p-0 bg-card border-border/50 gap-0">
 
-        <div className="relative h-64 md:h-80 w-full overflow-hidden">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
+        <div className="relative h-64 md:h-80 w-full overflow-hidden group/carousel">
+          {hasMultipleImages ? (
+            <Carousel
+              className="w-full h-full"
+              plugins={[autoplayPlugin]}
+            >
+              <CarouselContent className="h-full ml-0">
+                {displayImages.map((img, idx) => (
+                  <CarouselItem key={idx} className="h-full pl-0 relative">
+                    <img
+                      src={img}
+                      alt={`${project.title} - image ${idx + 1}`}
+                      className="w-full h-64 md:h-80 object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="absolute left-4 inset-y-0 my-auto opacity-0 group-hover/carousel:opacity-100 transition-opacity disabled:opacity-0" />
+              <CarouselNext className="absolute right-4 inset-y-0 my-auto opacity-0 group-hover/carousel:opacity-100 transition-opacity disabled:opacity-0" />
+            </Carousel>
+          ) : (
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent pointer-events-none"></div>
         </div>
 
         <div className="p-6 md:p-10 relative z-10 -mt-16">
