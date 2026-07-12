@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Button } from "../components/ui/button";
-import { Mail, MapPin, Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { Mail, MapPin, Send } from "lucide-react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa6";
 import {
   Dialog,
@@ -10,6 +10,7 @@ import {
   DialogTitle,
 } from "../components/ui/dialog";
 import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 
 type FormStatus = "idle" | "sending" | "success" | "error";
 
@@ -35,15 +36,13 @@ export function Contact() {
         formRef.current,
         VITE_EMAILJS_PUBLIC_KEY
       );
-      setStatus("success");
+      setStatus("idle");
       formRef.current.reset();
-      setTimeout(() => {
-        setStatus("idle");
-        setDialogOpen(false);
-      }, 3000);
+      setDialogOpen(false);
+      toast.success("Message sent! I'll get back to you soon.");
     } catch {
-      setStatus("error");
-      setTimeout(() => setStatus("idle"), 5000);
+      setStatus("idle");
+      toast.error("Something went wrong. Please try again.");
     }
   };
 
@@ -188,28 +187,6 @@ export function Contact() {
                   </span>
                 )}
               </Button>
-
-              {status === "success" && (
-                <motion.p
-                  initial={{ opacity: 0, y: 5 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="flex items-center justify-center gap-2 text-sm text-green-500 font-medium"
-                >
-                  <CheckCircle2 className="w-4 h-4" />
-                  Message sent! I'll get back to you soon.
-                </motion.p>
-              )}
-
-              {status === "error" && (
-                <motion.p
-                  initial={{ opacity: 0, y: 5 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="flex items-center justify-center gap-2 text-sm text-red-500 font-medium"
-                >
-                  <AlertCircle className="w-4 h-4" />
-                  Something went wrong. Please try again.
-                </motion.p>
-              )}
             </form>
           </div>
         </DialogContent>

@@ -11,6 +11,7 @@ import { Projects } from "./sections/Projects";
 import { Achievements } from "./sections/Achievements";
 import { Contact } from "./sections/Contact";
 import { ScrollArea } from "./components/ui/scroll-area";
+import { Toaster } from "./components/ui/sonner";
 
 export function App() {
   return (
@@ -32,6 +33,7 @@ export function App() {
           </main>
           <Footer />
         </ScrollArea>
+        <Toaster />
       </div>
     </ThemeProvider>
   );

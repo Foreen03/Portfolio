@@ -37,7 +37,7 @@ export const projects: Project[] = [
       "Vite",
       "BLE",
       "WebSocket",
-      "ShadcnUI",
+      "shadcn/ui",
       "Unity",
       "Godot",
       "Cocos Creator"
@@ -55,29 +55,13 @@ export const projects: Project[] = [
   },
   {
     id: "2",
-    title: "AI Writing Assistant",
-    description: "An AI-powered application for generating and editing text.",
-    longDescription:
-      "Leveraging the OpenAI API, this writing assistant helps users draft emails, essays, and creative stories. The interface is minimal, focusing entirely on the text, and provides real-time suggestions and grammar corrections.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop",
-    githubUrl: "https://github.com",
-    technologies: ["Next.js", "OpenAI API", "Framer Motion", "shadcn/ui"],
-    features: [
-      "Context-aware text generation",
-      "Tone adjustment and summarization tools",
-      "Markdown export functionality",
-      "Responsive and accessible design",
-    ],
-  },
-  {
-    id: "3",
     title: "Portfolio",
     description: "A premium, interactive developer portfolio website.",
     longDescription:
       "A modern developer portfolio built to showcase projects and experience. It features a custom Three.js animated background, Framer Motion transitions, and a fully responsive layout with dark mode support.",
     image: "src/assets/images/portfolio.png",
     githubUrl: "https://github.com",
-    technologies: ["React", "TypeScript", "Three.js", "TailwindCSS", "Framer Motion"],
+    technologies: ["React", "TypeScript", "Three.js", "TailwindCSS", "shadcn/ui", "EmailJS", "Vite"],
     features: [
       "Animated Three.js particle background and floating 3D icons",
       "Custom dark and light mode integration",
