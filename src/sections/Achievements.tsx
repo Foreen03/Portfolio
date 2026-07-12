@@ -42,9 +42,9 @@ export function Achievements() {
                   {achievement.title}
                 </h3>
                 
-                <div className="flex items-center justify-between mb-4 text-sm font-medium">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-4 text-sm font-medium">
                   <span className="text-muted-foreground">{achievement.organization}</span>
-                  <span className="text-primary bg-primary/10 px-2.5 py-1 rounded-full">
+                  <span className="text-primary bg-primary/10 px-2.5 py-1 rounded-full whitespace-nowrap shrink-0">
                     {achievement.date}
                   </span>
                 </div>

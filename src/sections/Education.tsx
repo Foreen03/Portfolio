@@ -31,11 +31,16 @@ export function Education() {
               {/* Timeline Dot */}
               <div className="absolute w-4 h-4 bg-background border-2 border-primary rounded-full -left-[9px] top-1.5 shadow-[0_0_10px_rgba(var(--primary),0.5)]"></div>
               
-              <div className="bg-card/40 backdrop-blur-sm border border-border/50 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md hover:bg-card/60 transition-all group">
+              <div className="bg-card/40 backdrop-blur-sm border border-border/50 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:bg-card/60 hover:border-primary/30 transition-all duration-300 group">
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{item.degree}</h3>
-                    <h4 className="text-lg font-medium text-muted-foreground">{item.school}</h4>
+                    <h4 className="text-lg font-medium text-muted-foreground mb-2">{item.school}</h4>
+                    {item.cgpa && (
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-muted/60 border border-border/80 text-muted-foreground w-fit">
+                        CGPA: {item.cgpa}
+                      </span>
+                    )}
                   </div>
                   <div className="shrink-0 bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium w-fit">
                     {item.duration}

@@ -9,23 +9,26 @@ export interface Achievement {
 export const achievementList: Achievement[] = [
   {
     id: "1",
-    title: "1st Place - Global Hackathon",
-    organization: "Tech Innovators",
-    date: "October 2023",
-    description: "Led a team of four to build an AI-driven accessibility tool in 48 hours, winning first place among 200+ competing teams.",
+    title: "1st Runner-Up – Best Project Award",
+    organization: "Multimedia University (MMU)",
+    date: "July 2026",
+    description:
+      "Awarded 1st Runner-Up in the Best Project Award (Software Engineering Specialization) for demonstrating innovation, technical excellence, and practical application.",
   },
   {
     id: "2",
-    title: "AWS Certified Solutions Architect – Associate",
-    organization: "Amazon Web Services",
-    date: "August 2022",
-    description: "Demonstrated knowledge of how to architect and deploy secure and robust applications on AWS technologies.",
+    title: "Dean's List",
+    organization: "Multimedia University (MMU)",
+    date: "2023 - 2026",
+    description:
+      "Recognized for outstanding academic performance by consistently achieving excellent results throughout the Bachelor of Computer Science (Hons.) programme.",
   },
   {
     id: "3",
-    title: "Dean's List of Academic Excellence",
-    organization: "State University",
-    date: "2019 - 2021",
-    description: "Awarded for maintaining a GPA of 3.8+ for four consecutive semesters during undergraduate studies.",
+    title: "Merit Scholarship",
+    organization: "Multimedia University (MMU)",
+    date: "2022",
+    description:
+      "Awarded a scholarship in recognition of strong academic achievement upon admission to the Foundation in Information Technology programme.",
   }
-];
+]

@@ -19,11 +19,10 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = (e: Event) => {
-      const target = e.target as HTMLElement;
-      console.log("scroll event target:", target, "scrollTop:", target?.scrollTop);
-      if (target && target.scrollTop !== undefined) {
-        setIsScrolled(target.scrollTop > 20);
+    const handleScroll = () => {
+      const viewport = document.querySelector('[data-slot="scroll-area-viewport"]');
+      if (viewport) {
+        setIsScrolled(viewport.scrollTop > 20);
       } else {
         setIsScrolled(window.scrollY > 20);
       }

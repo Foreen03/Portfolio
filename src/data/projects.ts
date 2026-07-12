@@ -21,7 +21,10 @@ export const projects: Project[] = [
     images: [
       "/src/assets/images/bluestep.png",
       "/src/assets/images/bluestep-2.png",
-      "/src/assets/images/bluestep-3.png"
+      "/src/assets/images/bluestep-3.jpg",
+      "/src/assets/images/bluestep-4.jpg",
+      "/src/assets/images/bluestep-5.png",
+      "/src/assets/images/bluestep-6.png"
     ],
     githubUrl: "https://github.com",
     technologies: [
