@@ -56,7 +56,8 @@ export const skillCategories: SkillCategory[] = [
       "DBeaver",
       "Android Studio",
       "VS Code",
-      "Visual Studio"
+      "Visual Studio",
+      "WSL"
     ],
   },
   {

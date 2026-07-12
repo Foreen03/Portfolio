@@ -7,7 +7,7 @@ export function Skills() {
   const activeCategory = skillCategories.find((c) => c.title === activeTab)!;
 
   return (
-    <section id="skills" className="py-24 relative z-10">
+    <section id="skills" className="py-24 relative z-10 bg-muted/30">
       <div className="container mx-auto px-6 max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
