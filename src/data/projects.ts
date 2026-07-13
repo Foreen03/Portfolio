@@ -1,3 +1,14 @@
+import bluestep from "../assets/images/bluestep.png";
+import bluestep2 from "../assets/images/bluestep-2.png";
+import bluestep3 from "../assets/images/bluestep-3.jpg";
+import bluestep4 from "../assets/images/bluestep-4.jpg";
+import bluestep5 from "../assets/images/bluestep-5.png";
+import bluestep6 from "../assets/images/bluestep-6.png";
+import portfolio from "../assets/images/portfolio.png";
+import campusEquityHub from "../assets/images/campus-equity-hub.png";
+import kindergartenPayment from "../assets/images/kindergarten-payment.png";
+import kwazamChess from "../assets/images/kwazam-chess.png";
+
 export interface Project {
   id: string;
   title: string;
@@ -22,14 +33,14 @@ export const projects: Project[] = [
     longDescription:
       "BlueStep Connect is a software framework that enables Android smartphones to act as motion-based controllers for PC games through Bluetooth Low Energy. The system consists of an Android controller application, a PC bridge server, and a cross-engine SDK that allows developers to integrate motion controls into games. It supports real-time sensor streaming, Xbox controller emulation through ViGEm, customizable controller layouts, and game engine integration.",
     category: "Final Year Project",
-    image: "src/assets/images/bluestep.png",
+    image: bluestep,
     images: [
-      "/src/assets/images/bluestep.png",
-      "/src/assets/images/bluestep-2.png",
-      "/src/assets/images/bluestep-3.jpg",
-      "/src/assets/images/bluestep-4.jpg",
-      "/src/assets/images/bluestep-5.png",
-      "/src/assets/images/bluestep-6.png"
+      bluestep,
+      bluestep2,
+      bluestep3,
+      bluestep4,
+      bluestep5,
+      bluestep6
     ],
     githubUrl: "https://github.com",
     demoUrl: "https://youtu.be/najeYP0hx6o",
@@ -62,7 +73,7 @@ export const projects: Project[] = [
     longDescription:
       "A modern developer portfolio built to showcase projects and experience. It features a custom Three.js animated background, Framer Motion transitions, and a fully responsive layout with dark mode support.",
     category: "Personal Project",
-    image: "src/assets/images/portfolio.png",
+    image: portfolio,
     githubUrl: "https://github.com",
     technologies: ["React", "TypeScript", "Three.js", "TailwindCSS", "shadcn/ui", "EmailJS", "Vite"],
     features: [
@@ -82,7 +93,7 @@ export const projects: Project[] = [
     role:
       "Implemented frontend and backend features including special status application, item verification, special status verification and swap acceptance workflows.",
     category: "Team Project",
-    image: "src/assets/images/campus-equity-hub.png",
+    image: campusEquityHub,
     githubUrl: "https://github.com/TheINSANE333/Campus-Equity-Hub",
     demoUrl: "https://simple-login-4ndj.onrender.com/",
     technologies: [
@@ -110,8 +121,7 @@ export const projects: Project[] = [
       "Designed and developed the backend architecture, database integration, authentication and authorization modules.",
     category:
       "Team Project",
-    image:
-      "src/assets/images/kindergarten-payment.png",
+    image: kindergartenPayment,
     githubUrl:
       "https://github.com/Foreen03/PaymentSystem",
     technologies: [
@@ -140,8 +150,7 @@ export const projects: Project[] = [
       "Designed and implemented the game logic, object-oriented architecture and user interaction components.",
     category:
       "Team Project",
-    image:
-      "src/assets/images/kwazam-chess.png",
+    image: kwazamChess,
     githubUrl:
       "https://github.com/Foreen03/Kwazam-Chess",
     technologies: [
