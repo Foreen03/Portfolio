@@ -18,7 +18,7 @@ export const projects: Project[] = [
     id: "1",
     title: "BlueStep Connect",
     description:
-      "A cross-platform motion controller framework that transforms Android smartphones into wireless controllers for PC games.",
+      "A cross-platform Bluetooth framework turning Android phones into motion game controllers for PC.",
     longDescription:
       "BlueStep Connect is a software framework that enables Android smartphones to act as motion-based controllers for PC games through Bluetooth Low Energy. The system consists of an Android controller application, a PC bridge server, and a cross-engine SDK that allows developers to integrate motion controls into games. It supports real-time sensor streaming, Xbox controller emulation through ViGEm, customizable controller layouts, and game engine integration.",
     category: "Final Year Project",
@@ -78,12 +78,13 @@ export const projects: Project[] = [
     description:
       "A campus marketplace platform that enables students to exchange and share items.",
     longDescription:
-      "Campus Equity Hub is a web-based marketplace platform designed for students to exchange items within the campus community. The platform provides item listing, verification, special status approval, and swap management workflows.",
+      "Campus Equity Hub is a web-based marketplace platform designed for students to exchange items within the campus community. The platform provides item listing, verification, special status approval and swap management workflows.",
     role:
-      "Implemented frontend and backend features including special status application, item verification, special status verification, and swap acceptance workflows.",
+      "Implemented frontend and backend features including special status application, item verification, special status verification and swap acceptance workflows.",
     category: "Team Project",
     image: "src/assets/images/campus-equity-hub.png",
     githubUrl: "https://github.com/TheINSANE333/Campus-Equity-Hub",
+    demoUrl: "https://simple-login-4ndj.onrender.com/",
     technologies: [
       "Flask",
       "Python",
@@ -96,6 +97,67 @@ export const projects: Project[] = [
       "Special status application and approval",
       "Swap acceptance management",
       "Software design pattern implementation"
+    ]
+  },
+  {
+    id: "4",
+    title: "Kindergarten Payment Management System",
+    description:
+      "A web-based system that streamlines kindergarten fee tracking and financial record management.",
+    longDescription:
+      "Kindergarten Payment Management System is a web application developed to simplify the management of student payments, invoices and financial records. The system provides a centralized platform for administrators to manage student information, track payment history, generate payment records and maintain accurate financial data. The backend architecture was designed using Flask and SQLAlchemy with database-driven operations and secure user access control.",
+    role:
+      "Designed and developed the backend architecture, database integration, authentication and authorization modules.",
+    category:
+      "Team Project",
+    image:
+      "src/assets/images/kindergarten-payment.png",
+    githubUrl:
+      "https://github.com/Foreen03/PaymentSystem",
+    technologies: [
+      "Python",
+      "Flask",
+      "SQLAlchemy",
+      "Bootstrap"
+    ],
+    features: [
+      "Student information management",
+      "Payment tracking and record management",
+      "Database integration using SQLAlchemy ORM",
+      "User authentication and authorization",
+      "CRUD operations for financial records",
+      "Responsive web interface"
+    ],
+  },
+  {
+    id: "5",
+    title: "Kwazam Chess",
+    description:
+      "A Java-based chess game implementing object-oriented design principles, MVC and design patterns.",
+    longDescription:
+      "Kwazam Chess is a desktop chess application developed in Java that implements complete chess gameplay mechanics including piece movement validation, turn management and game state handling. The project applies object-oriented programming principles, MVC architecture and software design patterns to improve code organization, maintainability and scalability.",
+    role:
+      "Designed and implemented the game logic, object-oriented architecture and user interaction components.",
+    category:
+      "Team Project",
+    image:
+      "src/assets/images/kwazam-chess.png",
+    githubUrl:
+      "https://github.com/Foreen03/Kwazam-Chess",
+    technologies: [
+      "Java",
+      "Java Swing",
+      "Object-Oriented Programming",
+      "MVC Architecture",
+      "Design Patterns"
+    ],
+    features: [
+      "Complete chess gameplay implementation",
+      "Legal move validation for chess pieces",
+      "Save & load game features",
+      "Object-oriented class hierarchy design",
+      "MVC architecture for separation of concerns",
+      "Design pattern implementation for maintainability"
     ],
   }
 ];

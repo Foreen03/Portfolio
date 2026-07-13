@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Button } from "../components/ui/button";
 import { Mail, MapPin, Send } from "lucide-react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import {
   Dialog,
   DialogContent,
@@ -86,9 +86,9 @@ export function Contact() {
               <FaLinkedin className="w-8 h-8 text-muted-foreground group-hover:text-[#0077b5] transition-colors" />
               <span className="text-sm font-medium">LinkedIn</span>
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer" className="group flex flex-col items-center gap-3 p-6 rounded-2xl bg-card/40 backdrop-blur-sm border border-border/50 hover:bg-card/80 transition-all hover:-translate-y-1">
-              <FaTwitter className="w-8 h-8 text-muted-foreground group-hover:text-[#1DA1F2] transition-colors" />
-              <span className="text-sm font-medium">Twitter</span>
+            <a href="mailto:yeohhanyi@gmail.com" className="group flex flex-col items-center gap-3 p-6 rounded-2xl bg-card/40 backdrop-blur-sm border border-border/50 hover:bg-card/80 transition-all hover:-translate-y-1">
+              <Mail className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors" />
+              <span className="text-sm font-medium">Email</span>
             </a>
             <div className="group flex flex-col items-center gap-3 p-6 rounded-2xl bg-card/40 backdrop-blur-sm border border-border/50 hover:bg-card/80 transition-all hover:-translate-y-1">
               <MapPin className="w-8 h-8 text-muted-foreground" />

@@ -1,4 +1,5 @@
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import { Mail } from "lucide-react";
 
 export function Footer() {
   return (
@@ -19,9 +20,9 @@ export function Footer() {
             <FaLinkedin className="w-5 h-5" />
             <span className="sr-only">LinkedIn</span>
           </a>
-          <a href="https://twitter.com/Hanyi_Yeoh" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-            <FaTwitter className="w-5 h-5" />
-            <span className="sr-only">Twitter</span>
+          <a href="mailto:yeohhanyi@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Mail className="w-5 h-5" />
+            <span className="sr-only">Email</span>
           </a>
         </div>
       </div>
