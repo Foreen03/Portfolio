@@ -52,7 +52,7 @@ export function Hero() {
               </a>
             </Button>
             <Button size="lg" variant="outline" className="group rounded-full px-8 bg-background/50 backdrop-blur-sm hover:bg-background/80">
-              <a href="/resume.pdf" target="_blank" className="flex items-center gap-2">
+              <a href="/assets/resume.pdf" target="_blank" className="flex items-center gap-2">
                 Download Resume
                 <Download className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
               </a>
