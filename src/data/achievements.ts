@@ -13,7 +13,7 @@ export const achievementList: Achievement[] = [
     organization: "Multimedia University (MMU)",
     date: "July 2026",
     description:
-      "Awarded 1st Runner-Up in the Best Project Award (Software Engineering Specialization) for demonstrating innovation, technical excellence, and practical application.",
+      "BlueStep Connect is awarded 1st Runner-Up in the Best Project Award (Software Engineering Specialization) for demonstrating innovation, technical excellence, and practical application.",
   },
   {
     id: "2",

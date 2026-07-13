@@ -41,6 +41,11 @@ export function Projects() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                {project.category && (
+                  <span className="absolute top-4 left-4 text-xs font-semibold px-3 py-1 rounded-full bg-background/80 backdrop-blur-sm text-foreground border border-border/50">
+                    {project.category}
+                  </span>
+                )}
               </div>
 
               <div className="p-6 md:p-8">

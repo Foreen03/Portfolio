@@ -7,6 +7,7 @@ import {
 import { ScrollArea } from "./ui/scroll-area";
 import type { Project } from "../data/projects";
 import { FaGithub } from "react-icons/fa6";
+import { ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
 import {
   Carousel,
@@ -73,15 +74,34 @@ export function ProjectDialog({ project, isOpen, onClose }: ProjectDialogProps) 
           <div className="bg-background/80 backdrop-blur-xl border border-border/50 rounded-2xl p-6 shadow-xl mb-6">
             <DialogHeader>
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                <DialogTitle className="text-3xl font-bold tracking-tight">
-                  {project.title}
-                </DialogTitle>
-                <Button asChild className="rounded-full shadow-lg group w-fit">
-                  <a href={project.githubUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2">
-                    <FaGithub className="w-4 h-4 group-hover:rotate-12 transition-transform" />
-                    View Source
-                  </a>
-                </Button>
+                <div className="flex items-center gap-3 flex-wrap">
+                  <DialogTitle className="text-3xl font-bold tracking-tight">
+                    {project.title}
+                  </DialogTitle>
+                  {project.category && (
+                    <span className="text-xs font-semibold px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                      {project.category}
+                    </span>
+                  )}
+                </div>
+                <div className="flex items-center gap-2 flex-wrap">
+                  {project.githubUrl && (
+                    <Button asChild variant="outline" className="rounded-full shadow-sm group w-fit">
+                      <a href={project.githubUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2">
+                        <FaGithub className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+                        Source
+                      </a>
+                    </Button>
+                  )}
+                  {project.demoUrl && (
+                    <Button asChild className="rounded-full shadow-lg group w-fit">
+                      <a href={project.demoUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2">
+                        <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                        View Demo
+                      </a>
+                    </Button>
+                  )}
+                </div>
               </div>
             </DialogHeader>
           </div>
@@ -94,6 +114,15 @@ export function ProjectDialog({ project, isOpen, onClose }: ProjectDialogProps) 
                   {project.longDescription}
                 </p>
               </div>
+
+              {project.role && (
+                <div>
+                  <h3 className="text-xl font-bold mb-3 text-foreground">My Role</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {project.role}
+                  </p>
+                </div>
+              )}
 
               <div>
                 <h3 className="text-xl font-bold mb-3 text-foreground">Key Features</h3>

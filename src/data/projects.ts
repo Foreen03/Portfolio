@@ -5,18 +5,23 @@ export interface Project {
   longDescription: string;
   image: string;
   images?: string[];
-  githubUrl: string;
+  githubUrl?: string;
+  demoUrl?: string;
   technologies: string[];
   features: string[];
+  role?: string;
+  category?: string;
 }
 
 export const projects: Project[] = [
   {
     id: "1",
     title: "BlueStep Connect",
-    description: "A cross-platform Bluetooth framework turning Android phones into motion game controllers for PC.",
+    description:
+      "A cross-platform motion controller framework that transforms Android smartphones into wireless controllers for PC games.",
     longDescription:
-      "BlueStep Connect is a cross-platform framework that converts standard Android smartphones into low-power motion controllers for PC games via BLE. It features a three-tier client-server architecture — an Android controller app (Jetpack Compose + MVVM), a PC bridge server (Photino.NET + React/Vite), and a cross-engine Game SDK (.NET Standard 2.1). The system achieves sub-10ms end-to-end latency at 60 Hz sensor streaming, supports Xbox 360 controller emulation via ViGEm, and includes a dynamic gamepad layout editor with device transfer. The SDK integrates with Unity, Godot 4, and Cocos Creator, making motion-based fitness game development accessible without specialized hardware.",
+      "BlueStep Connect is a software framework that enables Android smartphones to act as motion-based controllers for PC games through Bluetooth Low Energy. The system consists of an Android controller application, a PC bridge server, and a cross-engine SDK that allows developers to integrate motion controls into games. It supports real-time sensor streaming, Xbox controller emulation through ViGEm, customizable controller layouts, and game engine integration.",
+    category: "Final Year Project",
     image: "src/assets/images/bluestep.png",
     images: [
       "/src/assets/images/bluestep.png",
@@ -27,6 +32,7 @@ export const projects: Project[] = [
       "/src/assets/images/bluestep-6.png"
     ],
     githubUrl: "https://github.com",
+    demoUrl: "https://youtu.be/najeYP0hx6o",
     technologies: [
       "Kotlin",
       "Jetpack Compose",
@@ -34,24 +40,19 @@ export const projects: Project[] = [
       ".NET",
       "TypeScript",
       "React",
-      "Vite",
       "BLE",
       "WebSocket",
-      "shadcn/ui",
       "Unity",
       "Godot",
       "Cocos Creator"
     ],
     features: [
-      "Real-time BLE motion data streaming at 60 Hz with sub-10ms latency",
-      "Step detection and convert into character movement",
-      "Cross-engine SDK supporting Unity, Godot 4, and Cocos Creator",
-      "Xbox 360 controller emulation via ViGEm for existing PC games",
-      "Dynamic gamepad layout editor with phone-to-PC transfer",
-      "Frame-rate independent exponential damping for sensor noise reduction",
-      "Auto-pause handling on device interruptions (calls, alarms)",
-      "GPX trail simulation and EXIF-tagged screenshot capture",
-      "Heartbeat-based connection failure detection with auto-reconnect"
+      "Android smartphone motion controller using BLE",
+      "Real-time sensor data transmission and processing",
+      "Xbox 360 controller emulation using ViGEm",
+      "Cross-engine SDK integration",
+      "Customizable gamepad layout editor",
+      "Automatic reconnection and heartbeat monitoring"
     ],
   },
   {
@@ -60,6 +61,7 @@ export const projects: Project[] = [
     description: "A premium, interactive developer portfolio website.",
     longDescription:
       "A modern developer portfolio built to showcase projects and experience. It features a custom Three.js animated background, Framer Motion transitions, and a fully responsive layout with dark mode support.",
+    category: "Personal Project",
     image: "src/assets/images/portfolio.png",
     githubUrl: "https://github.com",
     technologies: ["React", "TypeScript", "Three.js", "TailwindCSS", "shadcn/ui", "EmailJS", "Vite"],
@@ -68,6 +70,32 @@ export const projects: Project[] = [
       "Custom dark and light mode integration",
       "Smooth Framer Motion scroll reveals and page transitions",
       "Accessible components using shadcn/ui",
+    ],
+  },
+  {
+    id: "3",
+    title: "Campus Equity Hub",
+    description:
+      "A campus marketplace platform that enables students to exchange and share items.",
+    longDescription:
+      "Campus Equity Hub is a web-based marketplace platform designed for students to exchange items within the campus community. The platform provides item listing, verification, special status approval, and swap management workflows.",
+    role:
+      "Implemented frontend and backend features including special status application, item verification, special status verification, and swap acceptance workflows.",
+    category: "Team Project",
+    image: "src/assets/images/campus-equity-hub.png",
+    githubUrl: "https://github.com/TheINSANE333/Campus-Equity-Hub",
+    technologies: [
+      "Flask",
+      "Python",
+      "SQLAlchemy",
+      "Bootstrap"
+    ],
+    features: [
+      "Item listing and swapping workflow",
+      "Item verification system",
+      "Special status application and approval",
+      "Swap acceptance management",
+      "Software design pattern implementation"
     ],
   }
 ];
