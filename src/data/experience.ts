@@ -11,7 +11,7 @@ export const experienceList: Experience[] = [
   {
     id: "1",
     company: "GlobeOSS",
-    position: "Software Engineering Intern",
+    position: "Technical Intern",
     duration: "Jul 2025 - Oct 2025",
     responsibilities: [
       "Developed and maintained full-stack features for enterprise web applications using React, Next.js, Express.js, and T-SQL.",
